@@ -39,7 +39,8 @@ def extractRecipes(driver, all_cocktail_urls):
         info = []
         for p_element in p_elements:
             p_element_str = str(p_element)
-            p_element_str.insert(0, cocktail_url)
+            # TODO: fix the below line
+            # p_element_str.insert(0, cocktail_url)
             info.append(p_element_str)
         
         cleaned_info = [i for i in info if '<strong>' not in i]
